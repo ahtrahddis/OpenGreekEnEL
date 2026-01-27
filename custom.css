@@ -1,0 +1,33 @@
+/* Custom CSS for Kindle Dictionary - Remove horizontal lines */
+
+/* Remove all horizontal rules */
+hr {
+    display: none !important;
+    border: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remove border from any dividers */
+.divider, .separator {
+    display: none !important;
+}
+
+/* Clean spacing between entries */
+.entry {
+    margin-bottom: 1em;
+    border: none !important;
+}
+
+/* Ensure no borders appear between parts of speech */
+.pos-section {
+    border-top: none !important;
+    border-bottom: none !important;
+    padding-top: 0.3em;
+}
+
+/* Remove any decorative lines */
+div[style*="border"], span[style*="border"] {
+    border: none !important;
+}
