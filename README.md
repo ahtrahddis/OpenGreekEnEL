@@ -14,7 +14,6 @@ You can find the ready-to-use dictionary file in the `mobi` folder of this repos
 * **Rich Metadata:** Clearly labeled parts of speech in Greek (e.g., **[Ουσ.]**, **[Ρήμ.]**, **[Επίθ.]**) for grammatical clarity.
 * **Contextual Examples:** Includes usage examples in italics to help understand how words are used in real sentences.
 * **Optimized for E-Ink:** High-contrast formatting with bold headers and bulleted definitions for easy reading on Kindle screens.
-* **Fully Offline:** No internet connection required once installed.
 
 ## Installation
 
@@ -40,3 +39,4 @@ The dictionary is generated using a custom Python pipeline:
 ## License
 
 This project is an independent effort. All dictionary data is provided under the **CC BY-SA 3.0** license. Proper attribution to Wiktionary contributors is maintained within the metadata and cover of the dictionary.
+
