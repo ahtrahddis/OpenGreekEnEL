@@ -6,7 +6,7 @@
 
 You can find the ready-to-use dictionary file in the `mobi` folder of this repository.
 
-* **Latest Version:** [OpenGreekEnEl_v1.mobi](https://github.com/ahtrahddis/OpenGreekEnEL/raw/refs/heads/main/mobi/OpenGreekEnEl_v1.mobi)
+* **Latest Version:** [OpenGreekEnEl_v1.mobi](https://github.com/ahtrahddis/OpenGreekEnEL/raw/refs/heads/main/mobi/OpenGreekEnEl_v2.mobi)
 
 ## Features
 
@@ -14,6 +14,7 @@ You can find the ready-to-use dictionary file in the `mobi` folder of this repos
 * **Rich Metadata:** Clearly labeled parts of speech in Greek (e.g., **[Ουσ.]**, **[Ρήμ.]**, **[Επίθ.]**) for grammatical clarity.
 * **Contextual Examples:** Includes usage examples in italics to help understand how words are used in real sentences.
 * **Optimized for E-Ink:** High-contrast formatting with bold headers and bulleted definitions for easy reading on Kindle screens.
+* **Fully Offline:** No internet connection required once installed.
 
 ## Installation
 
@@ -21,7 +22,7 @@ You can find the ready-to-use dictionary file in the `mobi` folder of this repos
 2. Locate the `documents/dictionaries` folder on your Kindle drive.
 3. Copy the `OpenGreekEnEl_v1.mobi` file into that folder.
 4. Safely eject your Kindle.
-5. On your Kindle, go to **Settings** > **Language & Dictionaries** > **Dictionaries** > **English** and select **OpenGreekEnEl** as your primary dictionary.
+5. On your Kindle, go to **Settings** > **Language & Dictionaries** > **Dictionaries** > **English** and select **OpenGreekENEL** as your primary dictionary.
 
 ## Technical Details
 
@@ -39,5 +40,3 @@ The dictionary is generated using a custom Python pipeline:
 ## License
 
 This project is an independent effort. All dictionary data is provided under the **CC BY-SA 3.0** license. Proper attribution to Wiktionary contributors is maintained within the metadata and cover of the dictionary.
-
-
