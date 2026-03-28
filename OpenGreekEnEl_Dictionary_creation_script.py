@@ -311,15 +311,14 @@ def merge_duplicate_entries(entries):
     return merged
 
 def format_entry(headword, entries):
-    """Format a complete dictionary entry for Kindle with cleaner hierarchy"""
+    """Format a complete dictionary entry for Kindle with cleaner block separation"""
     merged = merge_duplicate_entries(entries)
-
     formatted_parts = []
 
     for pos, data in merged.items():
         lines = []
 
-        # 1. First line: POS + translation only
+        # First line: POS + translations
         trans_list = []
         for trans in data["translations"]:
             if trans["note"]:
@@ -327,35 +326,46 @@ def format_entry(headword, entries):
             else:
                 trans_list.append(trans["word"])
 
-        first_line = f"<b>[{pos}]</b>"
+        first_line = f"<div class='pos-section'><b>[{pos}]</b>"
         if trans_list:
             first_line += f" {', '.join(trans_list)}"
+        first_line += "</div>"
         lines.append(first_line)
 
-        # 2. Form-of info on separate line
+        # Form-of info
         if data["form_of"]:
             forms = ", ".join(data["form_of"])
-            lines.append(f"<small><i>[μορφή του: {forms}]</i></small>")
+            lines.append(f"<div><small><i>[μορφή του: {forms}]</i></small></div>")
 
-        # 3. Usage/grammar tags on separate line
+        # Tags
         if data["tags"]:
             tags = ", ".join(sorted(data["tags"]))
-            lines.append(f"<small><i>[{tags}]</i></small>")
+            lines.append(f"<div><small><i>[{tags}]</i></small></div>")
 
-        # 4. English gloss/definition on separate line
+        # Glosses
         if data["glosses"]:
-            gloss_text = "; ".join(data["glosses"][:3])
-            lines.append(f"<small><i>({gloss_text})</i></small>")
+            gloss_text = "; ".join(data["glosses"][:2])
+            lines.append(f"<div><small><i>({gloss_text})</i></small></div>")
 
-        # 5. Examples below, each on its own line
+        # Examples
         if data["examples"]:
-            for example in data["examples"][:3]:
-                lines.append(f"• {example}")
+            kept = 0
+            for example in data["examples"]:
+                example = clean_text(example)
 
-        formatted_parts.append("<br>".join(lines))
+                # Kopa poly megala paradeigmata
+                if len(example) > 180:
+                    continue
 
-    # Clear separation between POS blocks
-    return "<br><br>".join(formatted_parts)
+                lines.append(f"<div class='example'>• {example}</div>")
+                kept += 1
+
+                if kept >= 2:
+                    break
+
+        formatted_parts.append("".join(lines))
+
+    return "<div class='entry'>" + "".join(formatted_parts) + "</div>"
 
 def write_output():
     """Write the final dictionary file"""
