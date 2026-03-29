@@ -20,7 +20,7 @@ You can find the ready-to-use dictionary file in the `mobi` folder of this repos
 
 1. Connect your Kindle to your computer via USB.
 2. Locate the `documents/dictionaries` folder on your Kindle drive.
-3. Copy the `OpenGreekEnEl_v1.mobi` file into that folder.
+3. Copy the `OpenGreekEnEl_v2.mobi` file into that folder.
 4. Safely eject your Kindle.
 5. On your Kindle, go to **Settings** > **Language & Dictionaries** > **Dictionaries** > **English** and select **OpenGreekENEL** as your primary dictionary.
 
