@@ -318,7 +318,6 @@ def format_entry(headword, entries):
     for pos, data in merged.items():
         lines = []
 
-        # First line: POS + translations
         trans_list = []
         for trans in data["translations"]:
             if trans["note"]:
@@ -332,28 +331,19 @@ def format_entry(headword, entries):
         first_line += "</div>"
         lines.append(first_line)
 
-        # Form-of info
         if data["form_of"]:
             forms = ", ".join(data["form_of"])
             lines.append(f"<div><small><i>[μορφή του: {forms}]</i></small></div>")
 
-        # Tags
-        if data["tags"]:
-            tags = ", ".join(sorted(data["tags"]))
-            lines.append(f"<div><small><i>[{tags}]</i></small></div>")
-
-        # Glosses
         if data["glosses"]:
             gloss_text = "; ".join(data["glosses"][:2])
             lines.append(f"<div><small><i>({gloss_text})</i></small></div>")
 
-        # Examples
         if data["examples"]:
             kept = 0
             for example in data["examples"]:
                 example = clean_text(example)
 
-                # Kopa poly megala paradeigmata
                 if len(example) > 180:
                     continue
 
