@@ -6,7 +6,7 @@
 
 You can find the ready-to-use dictionary file in the `mobi` folder of this repository.
 
-* **Latest Version:** [OpenGreekEnEl_v2.mobi](https://github.com/ahtrahddis/OpenGreekEnEL/raw/refs/heads/main/mobi/OpenGreekEnEl_v2.mobi)
+* **Latest Version:** [OpenGreekEnEl_v3.mobi](https://github.com/ahtrahddis/OpenGreekEnEL/raw/refs/heads/main/mobi/OpenGreekEnEl_v3.mobi)
 
 ## Features
 
