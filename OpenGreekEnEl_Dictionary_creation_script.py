@@ -335,9 +335,9 @@ def format_entry(headword, entries):
             forms = ", ".join(data["form_of"])
             lines.append(f"<div><small><i>[μορφή του: {forms}]</i></small></div>")
 
-        if data["glosses"]:
-            gloss_text = "; ".join(data["glosses"][:2])
-            lines.append(f"<div><small><i>({gloss_text})</i></small></div>")
+#        if data["glosses"]:
+#            gloss_text = "; ".join(data["glosses"][:2])
+#            lines.append(f"<div><small><i>({gloss_text})</i></small></div>")
 
         if data["examples"]:
             kept = 0
